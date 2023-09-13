@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_package = "org.demo.cop.priceservice.proto";
+
+service PriceService {
+  rpc GetPrice (PriceRequest) returns (PriceReply) {}
+}
+
+/* The request message containing the user's name.*/
+message PriceRequest {
+  string ticker = 1;
+}
+
+/* The response message containing the greetings */
+message PriceReply {
+  string ticker = 1;
+  double price = 2;
+  string sourceId = 3;
+}

@@ -1,0 +1,27 @@
+########################
+# Grpc Prices App
+########################
+kubectl get ns
+
+kubectl create namespace grpc-demo
+
+kubectl get pods -n grpc-demo
+kubectl get pod,svc -n grpc-demo
+
+kubectl apply -f kubectl/deployment-grpc-prices-pod-svc.yaml --namespace grpc-demo
+
+
+kubectl delete -f kubectl/deployment-grpc-prices-pod-svc.yaml -n http-demo
+
+
+
+
+
+#########kube-proxy########
+curl -v localhost:10249/proxyMode
+# iptables
+
+#k get ep -n grpc-demo
+#NAME                  ENDPOINTS                          AGE
+#grpc-prices-service   10.244.1.8:8999,10.244.2.10:8999   7m54s
+
